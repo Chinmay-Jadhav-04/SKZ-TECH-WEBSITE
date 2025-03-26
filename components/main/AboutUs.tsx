@@ -32,9 +32,14 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <div className="relative flex flex-col h-screen w-full" id="about" ref={sectionRef}>
-      {/* Content Container */}
-      <div className="relative z-[1] flex flex-col items-center justify-center min-h-screen w-full px-4 md:px-20 bg-gradient-to-b from-transparent to-black/50">
+    <div 
+      className="relative flex flex-col min-h-screen w-full mb-[20px]" 
+      id="about" 
+      ref={sectionRef}
+      style={{ scrollMarginTop: '100px' }}
+    >
+      {/* Content Container - add padding top to move content down */}
+      <div className="relative z-[1] flex flex-col items-center justify-center min-h-screen w-full px-4 md:px-20 bg-gradient-to-b from-transparent to-black/50 pt-[100px]">
         <motion.div
           variants={slideInFromTop}
           initial="hidden"
@@ -155,6 +160,10 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
+
+
+
+
 
 
 

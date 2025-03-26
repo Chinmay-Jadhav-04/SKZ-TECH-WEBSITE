@@ -44,7 +44,11 @@ const HeroContent = () => {
              Check out our project.
             </motion.p>
 
-            <Link href="#about">
+            <Link 
+              href="#about" 
+              scroll={true}
+              className="z-[50]"
+            >
               <motion.div
                 variants={slideInFromLeft(1)}
                 className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
