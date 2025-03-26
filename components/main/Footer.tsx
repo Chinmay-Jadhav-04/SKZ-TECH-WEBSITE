@@ -34,6 +34,20 @@ const Footer = () => {
     ]
   };
 
+  const bottomLinks = {
+    legal: [
+      { name: "Privacy Policy", url: "/privacy-policy" },
+      { name: "Terms of Service", url: "/terms-of-service" },
+      { name: "Cookie Policy", url: "/cookie-policy" }
+    ],
+    social: [
+      { name: "Instagram", icon: <RxInstagramLogo className="text-xl" />, url: "https://instagram.com/skz.tech" },
+      { name: "YouTube", icon: <FaYoutube className="text-xl" />, url: "https://youtube.com" },
+      { name: "LinkedIn", icon: <RxLinkedinLogo className="text-xl" />, url: "https://linkedin.com" },
+      { name: "Twitter", icon: <RxTwitterLogo className="text-xl" />, url: "https://twitter.com" }
+    ]
+  };
+
   return (
     <div className="relative w-full h-full bg-transparent text-gray-200 shadow-lg p-[15px] z-[40]">
       <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row justify-between z-[41]">
@@ -120,9 +134,43 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Copyright */}
-      <div className="text-center text-sm text-gray-400 mt-8 relative z-[42]">
-        &copy; SKZ-TECH {new Date().getFullYear()} Inc. All rights reserved
+      {/* New Bottom Section with three columns */}
+      <div className="border-t border-gray-700 mt-8 pt-8 relative z-[42]">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+          {/* Copyright - Left */}
+          <div className="text-sm text-gray-400 md:w-1/3 text-center md:text-left">
+            &copy; SKZ-TECH {new Date().getFullYear()} All rights reserved
+          </div>
+
+          {/* Legal Links - Middle */}
+          <div className="flex gap-6 md:w-1/3 justify-center text-sm flex-wrap">
+            {bottomLinks.legal.map((link, index) => (
+              <Link 
+                href={link.url} 
+                key={index}
+                className="text-gray-400 hover:text-purple-500 transition-colors whitespace-nowrap"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
+
+          {/* Social Icons - Right */}
+          <div className="flex gap-6 md:w-1/3 justify-center md:justify-end">
+            {bottomLinks.social.map((link, index) => (
+              <Link 
+                href={link.url} 
+                key={index}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-purple-500 transition-colors"
+                title={link.name}
+              >
+                {link.icon}
+              </Link>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
