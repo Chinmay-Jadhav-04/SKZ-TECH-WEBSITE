@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/layout.jsx", "app/page.jsx", "components/main/Hero.jsx", "components/main/Footer.jsx", "components/main/Encryption.jsx", "components/main/AboutUs.jsx", "constants/index.jsx", "components/sub/SkillText.jsx", "components/sub/SkillDataProvider.jsx", "components/sub/ProjectCard.jsx", "components/sub/HeroContent.jsx", "components/main/StarBackground.jsx", "components/main/SocialMedia.jsx", "components/main/Skills.jsx", "components/main/Projects.jsx"],
   "exclude": ["node_modules"]
 }

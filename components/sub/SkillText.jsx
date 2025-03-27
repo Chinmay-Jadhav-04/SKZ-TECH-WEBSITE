@@ -2,9 +2,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';import { SparklesIcon } from '@heroicons/react/20/solid';
 import { slideInFromLeft, slideInFromRight, slideInFromTop } from '@/utils/motion';
-interface SkillTextProps {  inView: boolean;
-}
-const SkillText = ({ inView }: SkillTextProps) => {  return (
+
+
+const SkillText = ({ inView }) => {  return (
     <>      <motion.div
         variants={slideInFromTop}        initial="hidden"
         animate={inView ? 'visible' : 'hidden'}        className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9] mb-[40px] flex flex-row items-center justify-center"

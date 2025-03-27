@@ -5,14 +5,8 @@ import {motion} from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import Image from 'next/image'
 
-interface Props {
-  src: string;
-  width: number;
-  height: number;
-  index: number;
-}
 
-const SkillDataProvider = ({src, width, height, index} : Props ) => {
+const SkillDataProvider = ({src, width, height, index}) => {
   const {ref, inView} = useInView({
     triggerOnce: true,
     threshold: 0.5
