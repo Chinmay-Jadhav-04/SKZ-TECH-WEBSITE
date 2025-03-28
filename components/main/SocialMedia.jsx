@@ -26,7 +26,7 @@ const SocialMedia = () => {
     {
       name: 'Email Us',
       icon: '/GmailLogo.jpg', // Updated to use JPG file
-      url: 'https://mail.google.com/' // Updated to use Google Mail
+      url: "mailto:admin@skztech.in" // Updated to use Google Mail
     },
     {
       name: 'LinkedIn',

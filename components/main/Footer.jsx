@@ -24,7 +24,7 @@ const Footer = () => {
     about: [
       { name: "Become Sponsor", url: "/sponsor" },
       { name: "Learning about me", url: "/about" },
-      { name: "Contact", url: "mailto:mifwebchain@gmail.com" }
+      { name: "Contact", url: "mailto:admin@skztech.in" }
     ],
     services: [
       { name: "Web Development", url: "/services/web" },
